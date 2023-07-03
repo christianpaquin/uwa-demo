@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@h4ck3r soc.ial page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+        <a href="https://soc.ial">soc.ial</a>
+        <input type="text" placeholder="Search soc.ial">
+    </header>
+
+    <!-- Profile Section -->
+    <div id="profile-section">
+        <img id="profile-picture" src="h4ck3r.png" alt="Profile Picture">
+        <div id="profile-info">
+            <div id="account-name">@h4ck3r</div>
+            <div id="bio" contenteditable="false">
+                Hack the planet!<br/>
+            </div>
+            <button id="edit-button">Edit Bio</button>
+        </div>
+    </div>
+
+    <!-- Posts Section -->
+
+    <div id="posts-section">
+        <h2>Your Posts</h2>
+
+	<div class="post">
+	  <input type="text" placeholder="What's on your mind?">
+	  <button>Add post</button>
+	</div>
+
+        <div class="post">
+          <p>There is no right and wrong. There's only fun and boring.<br>
+	   -- The Plague</p>
+	  <br>
+	    <div class="post-image">
+	      <img src="hack_planet.jpg" width="30%">
+	    </div>
+	    <div class="interactions">
+	      <div class="post-date">
+		<span>2h</span>
+              </div>
+              <div class="likes">
+		<img src="heart-icon.svg" alt="Like Icon">
+		<span>2</span>
+              </div>
+              <div class="comments">
+		<img src="chat-icon.svg" alt="Comment Icon">
+		<span>0</span>
+              </div>
+	    </div>
+        </div>
+
+        <div class="post">
+            <p>Mess with the best, die like the rest.<br>-- Zero Cool</p>
+
+	    <div class="interactions">
+	      <div class="post-date">
+		<span>1 day</span>
+              </div>
+              <div class="likes">
+		<img src="heart-icon.svg" alt="Like Icon">
+		<span>7</span>
+              </div>
+              <div class="comments">
+		<img src="chat-icon.svg" alt="Comment Icon">
+		<span>1</span>
+              </div>
+	    </div>
+
+        </div>
+        <!-- Add more posts here -->
+    </div>
+
+    <script>
+      document.getElementById("edit-button").addEventListener("click", function() {
+          var bio = document.getElementById("bio");
+          if (bio.getAttribute("contenteditable") == "false") {
+              bio.setAttribute("contenteditable", "true");
+              bio.focus();
+              this.innerHTML = "Save Bio";
+          } else {
+              bio.setAttribute("contenteditable", "false");
+              this.innerHTML = "Edit Bio";
+              // Save the current bio to localStorage
+              localStorage.setItem('h4ck3rbio', bio.innerHTML);
+          }
+      });
+
+      // On page load, check if there's a bio in local storage
+      document.addEventListener("DOMContentLoaded", function() {
+          var storedBio = localStorage.getItem('h4ck3rbio');
+          if (storedBio) {
+              // If there is, update the bio section with that data
+              document.getElementById('bio').innerHTML = storedBio;
+          }
+      });
+    </script>
+  </body>
+</html>

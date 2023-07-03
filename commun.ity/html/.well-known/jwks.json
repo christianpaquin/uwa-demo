@@ -1,0 +1,11 @@
+{
+    "keys": [
+        {
+            "kty": "UP",
+            "alg": "UP256",
+            "kid": "1RJhu-U1TQG2e4niCNfsiPuvvtA0frlp4rn4MObB0JM",
+            "g0": "BN2J7XJESotHY9mO-cctO3JbEF0EqFKmzncJyhye6tJoBiTQsEG62Ynlb7CMTNHvhDcjzCvt6h91ckexfJ-KgLE",
+            "spec": "eyJuIjowLCJleHBUeXBlIjoiZGF5IiwiYWJvdXQiOiJodHRwczovL2NvbW11bi5pdHkvYWJvdXQuaHRtbCIsImxibFR5cGUiOiJNZW1iZXJzaGlwIGxldmVsIiwibGJsVmFsdWVzIjp7IjEiOiJHb2xkIiwiMiI6IlNpbHZlciIsIjMiOiJCcm9uemUifX0"
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@pr1v4cy soc.ial page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+        <a href="https://soc.ial">soc.ial</a>
+        <input type="text" placeholder="Search soc.ial">
+    </header>
+
+    <!-- Profile Section -->
+    <div id="profile-section">
+        <img id="profile-picture" src="pr1v4cy.jpg" alt="Profile Picture">
+        <div id="profile-info">
+            <div id="account-name">@pr1v4cy</div>
+            <div id="bio" contenteditable="false">
+                Web surfer. Privacy defender. Dog lover. <br/>
+            </div>
+            <button id="edit-button">Edit Bio</button>
+        </div>
+    </div>
+
+    <!-- Posts Section -->
+
+    <div id="posts-section">
+        <h2>Your Posts</h2>
+
+	<div class="post">
+	  <input type="text" placeholder="What's on your mind?">
+	  <button>Add post</button>
+	</div>
+
+        <div class="post">
+          <p>On the internet, nobody knows you are an AI-powered dog!</p>
+	  <br>
+	    <div class="post-image">
+	      <img src="ai-powered-dog.jpg" width="30%">
+	    </div>
+	    <div class="interactions">
+	      <div class="post-date">
+		<span>5h</span>
+              </div>
+              <div class="likes">
+		<img src="heart-icon.svg" alt="Like Icon">
+		<span>723</span>
+              </div>
+              <div class="comments">
+		<img src="chat-icon.svg" alt="Comment Icon">
+		<span>9</span>
+              </div>
+	    </div>
+        </div>
+
+        <div class="post">
+            <p>Check out this User-centric Web Attestation project! <a href="">https://github.com/microsoft/web-attestation-sample</a>.</p>
+	    <div class="interactions">
+	      <div class="post-date">
+		<span>1 day</span>
+              </div>
+              <div class="likes">
+		<img src="heart-icon.svg" alt="Like Icon">
+		<span>78</span>
+              </div>
+              <div class="comments">
+		<img src="chat-icon.svg" alt="Comment Icon">
+		<span>21</span>
+              </div>
+	    </div>
+        </div>
+
+        <div class="post">
+          <p>We need U-Prove to protect our privacy! <a href="https://microsoft.com/uprove">microsoft.com/uprove</a></p>
+	  <br>
+	    <div class="post-image">
+	      <img src="u-prove.jpg" width="30%">
+	    </div>
+	    <div class="interactions">
+	      <div class="post-date">
+		<span>3 days</span>
+              </div>
+              <div class="likes">
+		<img src="heart-icon.svg" alt="Like Icon">
+		<span>99</span>
+              </div>
+              <div class="comments">
+		<img src="chat-icon.svg" alt="Comment Icon">
+		<span>14</span>
+              </div>
+	    </div>
+        </div>
+
+
+    </div>
+
+    <script>
+      document.getElementById("edit-button").addEventListener("click", function() {
+          var bio = document.getElementById("bio");
+          if (bio.getAttribute("contenteditable") == "false") {
+              bio.setAttribute("contenteditable", "true");
+              bio.focus();
+              this.innerHTML = "Save Bio";
+          } else {
+              bio.setAttribute("contenteditable", "false");
+              this.innerHTML = "Edit Bio";
+              // Save the current bio to localStorage
+              localStorage.setItem('pr1v4cybio', bio.innerHTML);
+          }
+      });
+
+      // On page load, check if there's a bio in local storage
+      document.addEventListener("DOMContentLoaded", function() {
+          var storedBio = localStorage.getItem('pr1v4cybio');
+          if (storedBio) {
+              // If there is, update the bio section with that data
+              document.getElementById('bio').innerHTML = storedBio;
+          }
+      });
+    </script>
+  </body>
+</html>
