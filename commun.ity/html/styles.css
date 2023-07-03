@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    color: #4466cc;
+}
+
+h2 {
+    color: #6699cc;
+}
+
+nav {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+a {
+    color: #4466cc;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.brand-name {
+    color: #4466cc;
+    font-weight: bold;
+}
+
+#banner {
+    width: 100%;
+    height: auto;
+}
+
+.uwa-message {
+    background-color: #ffff99; /* a light yellow color */
+    color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccc66; /* a darker yellow color for the border */
+    width: 50%; 
+    margin: 0 auto;
+}
